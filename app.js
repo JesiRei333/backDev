@@ -17,7 +17,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send({ message: "API Kodemia repaso gen 31" });
+  res.send({ message: "Kodemia backDEVclone Jes" });
 });
 
 app.use("/users", userRoutes);
