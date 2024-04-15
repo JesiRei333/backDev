@@ -17,8 +17,7 @@ router.post("/enter", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email: email }); //busca por correo
-
+    const user = await User.findOne({ email: email });
     if (!user || !(await User.isValidPassword(password, user.password))) {
       res.status(401).send({ message: "password or email invalid " });
     } else {
